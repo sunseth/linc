@@ -20,8 +20,8 @@ app.get('/new', function (req, res) {
   var key = req.query.key;
   var user = {
     key: key,
-    first: "John",
-    last: "Doe",
+    first: first,
+    last: last,
     active: false
   };
   res.send(user);
