@@ -14,7 +14,10 @@ app.get('/', function (req, res) {
 });
 
 app.get('/new', function (req, res) {
-  var key = rand.generateKey();
+  //var key = rand.generateKey();
+  var first = req.query.first;
+  var last = req.query.last;
+  var key = req.query.key;
   var user = {
     key: key,
     first: "John",
@@ -41,13 +44,13 @@ app.get('/channel/:channel', function (req, res) {
     key: key1,
     first: "John",
     last: "Doe",
-    active: false
+    active: true
   };
   var user_2 = {
     key: key2,
     first: "Bernie",
     last: "Sanders",
-    active: false
+    active: true
   };
   var user_3 = {
     key: key3,
